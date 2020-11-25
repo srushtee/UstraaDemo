@@ -1,11 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import TabComp from './Components/TabComponent/TabComp'
+import TabComp from './Components/TabsComp/TabComp'
 
 function App() {
   return (
     <div className="App">
-        <TabComp />
+        <label className="products">Our Products</label>
+        <div>
+          <TabComp />
+        </div>
     </div>
   );
 }
