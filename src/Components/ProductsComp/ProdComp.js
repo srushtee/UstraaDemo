@@ -5,7 +5,7 @@ import './prodCompStyles.css'
 
 const ProdComp = (categoryId) => {
 
-    console.log(categoryId.category);
+    
 
     const [products, setProducts] = React.useState([])
     

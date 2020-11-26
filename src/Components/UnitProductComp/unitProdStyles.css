@@ -42,6 +42,13 @@
     margin-top: 17px;
     margin-left: -10px;
 }
+.weight {
+    margin-left: 20px;
+    margin-top:15px;
+    margin-bottom: -10px;
+    font-size: 13px;
+    color: rgb(149,149,149);
+}
 
 .button1 {
     height: 40px;
@@ -57,13 +64,15 @@
 .button1:active {
     text-decoration: none;
 }
+.button1:hover {
+    cursor: pointer;
+}
 
 .button2 {
    
     height: 40px;
     width: 150px;
     margin-left: 20px;
-    margin-bottom: 20px;
     background-color: rgb(176, 176, 176);
     border: none;
     color: white;

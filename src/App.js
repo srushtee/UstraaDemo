@@ -9,7 +9,7 @@ function App() {
   const [categoryId, setCategoryId] = React.useState(185)
 
   const handleCategoryId = (newValue) => {
-    console.log(`handling value in here`);
+   
       setCategoryId(newValue)
   }
 
@@ -17,7 +17,7 @@ function App() {
     <div className="App">
         <label className="products">Our Products</label>
         <div>
-          <TabComp  />
+          <TabComp onChange={handleCategoryId} />
           <ProdComp category={categoryId}/>
         </div>
     </div>
