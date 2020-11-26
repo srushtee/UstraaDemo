@@ -73,4 +73,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 install Axios for fetching the data.
 yarn add axios
 
+start the app using yarn start
+
+Press Ctrl+Shift+I to open dev tools
+Change the view from web view to mobile view.
 
