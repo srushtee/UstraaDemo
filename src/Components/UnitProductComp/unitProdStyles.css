@@ -60,7 +60,14 @@
 
 .button2 {
    
+    height: 40px;
+    width: 150px;
     margin-left: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(176, 176, 176);
+    border: none;
+    color: white;
+    font-weight: bolder;
 }
 
 hr.dashed {

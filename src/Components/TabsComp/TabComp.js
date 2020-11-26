@@ -6,10 +6,11 @@ import { tabDataService } from '../../Controllers/tabDataController'
 import ImageSrc from '../ImageCcomp/ImageSrc'
 import './tabCompStyles.css'
 
-const TabComp = () => {
+const TabComp = (props) => {
  
-  
+    
   const [categories, setCategories] = React.useState([])
+  const [categoryId, setCategoryId] = React.useState(185)
 
   useEffect(() => {
         tabDataService()
@@ -20,19 +21,22 @@ const TabComp = () => {
         .catch(err => console.log(err))
   },[])
 
+  const handleClick = (newValue) => {
+      
+      setCategoryId(newValue)
+  }
   
 
   return (
     <div className="Tab_Component">
       <AppBar position="static" color="default">
         <Tabs
-         
          className="appbar"
          variant="scrollable"
           scrollButtons="auto">
         <div className="tabContainer">
         {categories.map(item => (
-            <span key={item.category_id} className="tabLayout">
+            <span onClick={() => handleClick(item.category_id)} key={item.category_id} className="tabLayout">
                 <Tab icon={<ImageSrc img={item.category_image}/>}/>
                 <span className="centered">{item.category_name}</span>
             </span>

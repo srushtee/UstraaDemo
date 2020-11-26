@@ -3,14 +3,16 @@ import  {productDataService}  from '../../Controllers/productDataController'
 import UnitProductComp from '../UnitProductComp/UnitProductComp'
 import './prodCompStyles.css'
 
-const ProdComp = () => {
+const ProdComp = (categoryId) => {
+
+    console.log(categoryId.category);
 
     const [products, setProducts] = React.useState([])
     
     const [category_id, setCategory_id] = React.useState(185)
 
     React.useEffect(() => {
-        productDataService(category_id)
+        productDataService(categoryId.category)
         .then(data => (
            
             setProducts(data.data.products)
