@@ -1,14 +1,17 @@
 .Tab_Component {
-    margin-top: 40px;
+    margin-top: 15px;
     display: flex;
     flex-direction: row;
+    margin-bottom: 50px;
 }
 
 .tabLayout {
   
     position: relative;
     text-align: center;
-    color: white;   
+    color: white;
+    
+    
 }
 
 

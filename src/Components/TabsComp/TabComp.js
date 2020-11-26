@@ -8,7 +8,7 @@ import './tabCompStyles.css'
 
 const TabComp = () => {
  
- 
+  
   const [categories, setCategories] = React.useState([])
 
   useEffect(() => {
@@ -20,21 +20,20 @@ const TabComp = () => {
         .catch(err => console.log(err))
   },[])
 
+  
+
   return (
     <div className="Tab_Component">
       <AppBar position="static" color="default">
         <Tabs
+         
          className="appbar"
-          indicatorColor="primary"
-          textColor="primary"
-          variant="scrollable"
-          scrollButtons="auto"
-          aria-label="scrollable auto tabs example"
-        >
-        <div class="tabContainer">
+         variant="scrollable"
+          scrollButtons="auto">
+        <div className="tabContainer">
         {categories.map(item => (
-            <span className="tabLayout">
-                <Tab  key={item.category_id} icon={<ImageSrc img={item.category_image}/>}/>
+            <span key={item.category_id} className="tabLayout">
+                <Tab icon={<ImageSrc img={item.category_image}/>}/>
                 <span className="centered">{item.category_name}</span>
             </span>
         ))}
